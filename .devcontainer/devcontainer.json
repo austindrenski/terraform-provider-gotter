@@ -1,0 +1,34 @@
+{
+  "customizations": {
+    "jetbrains": {
+      "backend": "GoLand",
+      "plugins": [
+        "com.github.copilot",
+        "com.jetbrains.opentelemetry",
+        "org.jetbrains.plugins.go-template"
+      ],
+      "settings": {}
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.4": {},
+    "ghcr.io/devcontainers/features/github-cli:1.0.14": {},
+    "ghcr.io/devcontainers/features/go:1.3.2": {},
+    "ghcr.io/devcontainers/features/sshd:1.0.10": {}
+  },
+  "image": "ubuntu:noble",
+  "mounts": [
+    {
+      "source": "${localEnv:DOCKER_SOCK}",
+      "target": "/var/run/docker-host.sock",
+      "type": "bind"
+    }
+  ],
+  "name": "terraform-provider-gotter",
+  "runArgs": [
+    "--network=host"
+  ],
+  "updateContentCommand": "go build -C ${containerWorkspaceFolder}",
+  "workspaceFolder": "/code/terraform-provider-gotter",
+  "workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind"
+}

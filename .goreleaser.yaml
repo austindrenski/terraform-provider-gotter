@@ -1,0 +1,36 @@
+version: 2
+
+archives:
+- format: "zip"
+  name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+before:
+  hooks:
+  - "go mod verify"
+
+builds:
+- binary: "{{ .ProjectName }}_v{{ .Version }}"
+  env:
+  - "CGO_ENABLED=0"
+  flags:
+  - "-trimpath"
+  goos:
+  - "darwin"
+  - "linux"
+  - "windows"
+  goarch:
+  - "amd64"
+  - "arm64"
+  ldflags:
+  - "-s -w -X main.version={{.Version}}"
+  mod_timestamp: "{{ .CommitTimestamp }}"
+
+checksum:
+  algorithm: "sha256"
+  extra_files: &extra
+  - glob: "terraform-registry-manifest.json"
+    name_template: "{{ .ProjectName }}_{{ .Version }}_manifest.json"
+  name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
+
+release:
+  extra_files: *extra
