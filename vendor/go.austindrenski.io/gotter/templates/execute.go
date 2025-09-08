@@ -16,6 +16,8 @@ func Execute(ctx context.Context, t *template.Template, data any, w io.Writer) e
 	ctx, span := trace.SpanFromContext(ctx).TracerProvider().Tracer(scopeName).Start(ctx, "execute")
 	defer span.End()
 
+	span.SetAttributes(attribute.String("gotter.template.name", t.Name()))
+
 	if err := t.Execute(w, data); err != nil {
 		span.RecordError(err)
 		span.SetAttributes(attribute.String("gotter.template.data", fmt.Sprintf("%v", data)))

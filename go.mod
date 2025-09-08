@@ -4,7 +4,7 @@ go 1.25.1
 
 require (
 	github.com/hashicorp/terraform-plugin-framework v1.15.1
-	go.austindrenski.io/gotter v0.0.0-20250906011911-84a47b46a491
+	go.austindrenski.io/gotter v0.0.0-20250908195653-93724ac9ec5b
 	go.opentelemetry.io/otel v1.38.0
 )
 
@@ -68,7 +68,7 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/net v0.43.0 // indirect
 	golang.org/x/sys v0.35.0 // indirect
-	golang.org/x/text v0.28.0 // indirect
+	golang.org/x/text v0.29.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250825161204-c5933d9347a5 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250825161204-c5933d9347a5 // indirect
 	google.golang.org/grpc v1.75.0 // indirect
