@@ -18,6 +18,9 @@ jobs:
         fetch-depth: 0
 
     - uses: actions/setup-go@v5.5.0
+      with:
+        cache-dependency-path: go.sum
+        go-version-file: go.mod
 
     - uses: crazy-max/ghaction-import-gpg@v6.3.0
       id: import_gpg
