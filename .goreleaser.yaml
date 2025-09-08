@@ -35,3 +35,14 @@ checksum:
 
 release:
   extra_files: *extra
+
+signs:
+- artifacts: checksum
+  args:
+  - "--batch"
+  - "--detach-sign"
+  - "${artifact}"
+  - "--local-user"
+  - "{{ .Env.GPG_FINGERPRINT }}"
+  - "--output"
+  - "${signature}"
