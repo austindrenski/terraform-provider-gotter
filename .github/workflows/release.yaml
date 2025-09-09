@@ -33,4 +33,3 @@ jobs:
         GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
       with:
         args: release --clean
-        version: latest
