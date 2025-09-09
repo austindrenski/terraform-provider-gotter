@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 )
 
-var _ provider.ProviderWithFunctions = gotterProvider{}
+var _ provider.ProviderWithFunctions = (*gotterProvider)(nil)
 
 type gotterProvider struct {
 	name    string
