@@ -36,7 +36,16 @@ func (p gotterProvider) DataSources(_ context.Context) []func() datasource.DataS
 func (p gotterProvider) Functions(_ context.Context) []func() function.Function {
 	return []func() function.Function{
 		func() function.Function {
-			return execute{}
+			return execute{
+				file: false,
+				name: "execute",
+			}
+		},
+		func() function.Function {
+			return execute{
+				file: true,
+				name: "execute_file",
+			}
 		},
 	}
 }
