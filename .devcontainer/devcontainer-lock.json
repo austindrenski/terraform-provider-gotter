@@ -1,9 +1,9 @@
 {
   "features": {
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.4": {
-      "version": "1.6.4",
-      "resolved": "ghcr.io/devcontainers/features/docker-outside-of-docker@sha256:97a487a5ba0ed29a3532d6fb07ebef603e5e6a366ce8b3de0a208fce953a4779",
-      "integrity": "sha256:97a487a5ba0ed29a3532d6fb07ebef603e5e6a366ce8b3de0a208fce953a4779"
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1.6.5": {
+      "version": "1.6.5",
+      "resolved": "ghcr.io/devcontainers/features/docker-outside-of-docker@sha256:5c0af58d6acc6d81e38b5a6130724330f2eb4f703120dea0016a35da4ad30861",
+      "integrity": "sha256:5c0af58d6acc6d81e38b5a6130724330f2eb4f703120dea0016a35da4ad30861"
     },
     "ghcr.io/devcontainers/features/github-cli:1.0.14": {
       "version": "1.0.14",
