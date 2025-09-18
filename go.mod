@@ -3,7 +3,7 @@ module go.austindrenski.io/terraform-provider-gotter
 go 1.25.1
 
 require (
-	github.com/hashicorp/terraform-plugin-framework v1.15.1
+	github.com/hashicorp/terraform-plugin-framework v1.16.0
 	github.com/hashicorp/terraform-plugin-go v0.29.0
 	github.com/hashicorp/terraform-plugin-testing v1.13.3
 	go.austindrenski.io/gotter v0.0.0-20250908195653-93724ac9ec5b
